@@ -5,7 +5,7 @@ terraform {
       version = "~> 4.0"
     }
   }
-  
+
   backend "gcs" {
     bucket = "terraformoenbabai-test"
     prefix = "cloud-sql"
