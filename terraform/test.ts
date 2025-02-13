@@ -1,0 +1,6 @@
+const url = new URL("https://ppcloudapi.apollo247.in/document-service/api/v1/documents/public/42p6FVQohbSR0aV0FSBr3002ApNOcAh0tcAyqzuVV-6JcVriBex0N3i8ZUY883IK?id=29fe8249-13f2-4feb-a4e2-9aa036bcd712&authToken=ZXlKaGJHY2lPaUpJVXpNNE5DSjkuZXlKeWIyeGxJam9pVWs5TVJWOVZVMFZTSWl3aWFYTnpJam9pWVhCdmJHeHZMV1J2WTNWdFpXNTBMWE5sY25acFkyVWlMQ0p6ZFdJaU9pSmhjRzlzYkc4dFpHbGhaMjV2YzNScFl5MXpaWEoyYVdObElpd2lhV0YwSWpveE56RTBOalF6TkRjNExDSmxlSEFpT2pFM01qRTBOamt3TnpoOS5meEUyTGY3YzVYejJaZ1otQWk0YUlmLXdmVTlYU3k5NW1DcmFWNDdTSDZCbDVIbndMejQwNWI3NGd2SG5NVzF0");
+const searchparams = url.searchParams;
+console.log(searchparams);
+searchparams.set("authToken","testtt");
+console.log(searchparams);
+console.log(url.href);
