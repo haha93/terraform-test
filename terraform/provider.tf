@@ -7,7 +7,7 @@ terraform {
   }
   
   backend "gcs" {
-    bucket = "your-terraform-state-bucket"
+    bucket = "terraformoenbabai-test"
     prefix = "cloud-sql"
   }
 }
