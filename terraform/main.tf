@@ -1,26 +1,26 @@
 resource "google_sql_database_instance" "instance" {
   name             = var.instance_name
-  database_version = "MYSQL_8_0"  # or your preferred version
+  database_version = "MYSQL_8_0"
   region           = var.region
-  
+
   settings {
-    tier = "db-f1-micro"  # or your preferred tier
-    
+    tier = "db-f1-micro"
+
     backup_configuration {
-      enabled = true
+      enabled            = true
       binary_log_enabled = true
     }
-    
+
     ip_configuration {
       ipv4_enabled = true
       authorized_networks {
         name  = "allow-all"
-        value = "0.0.0.0/0"  # Be more restrictive in production
+        value = "0.0.0.0/0"
       }
     }
   }
 
-  deletion_protection = false  # Set to true for production
+  deletion_protection = false
 }
 
 resource "google_sql_database" "database" {
@@ -33,5 +33,3 @@ resource "google_sql_user" "users" {
   instance = google_sql_database_instance.instance.name
   password = var.database_password
 }
-
-
